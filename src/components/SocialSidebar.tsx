@@ -4,7 +4,7 @@ import { profile } from "@/data/portfolio";
 const items = [
   { href: profile.github, label: "GitHub", Icon: Github },
   { href: profile.linkedin, label: "LinkedIn", Icon: Linkedin },
-  { href: `mailto:${profile.email}`, label: "Email", Icon: Mail },
+  { href: profile.gmailCompose, label: "Email", Icon: Mail },
   { href: `tel:${profile.phone.replace(/\s/g, "")}`, label: "Phone", Icon: Phone },
 ];
 

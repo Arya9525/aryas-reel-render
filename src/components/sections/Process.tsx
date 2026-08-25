@@ -10,24 +10,21 @@ export function Process() {
           label="How I Work"
           title={
             <>
-              From an idea to a
+              From an idea to
               <br />
-              <span className="text-gradient-red">real-world application</span>
+              <span className="text-gradient-red">a real-world application</span>
             </>
           }
           subtitle="The steps I follow when turning a problem into a working product."
-          align="center"
         />
 
         <div className="relative mt-16">
           <div className="absolute inset-x-0 top-1/2 hidden h-px border-t border-dashed border-border lg:block" />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {process.map((p, i) => (
               <Reveal key={p.step} delay={i * 80}>
                 <div
-                  className={`surface-card relative h-full p-7 transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 ${
-                    i % 2 === 1 ? "lg:translate-y-8" : ""
-                  }`}
+                  className="surface-card relative h-full p-7 transition-all duration-300 hover:-translate-y-2 hover:border-primary/40"
                 >
                   <span className="font-display text-4xl font-extrabold text-primary/25">
                     {p.step}

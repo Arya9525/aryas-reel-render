@@ -13,10 +13,9 @@ export function SoftSkills() {
           label="Professional Soft Skills"
           title={
             <>
-              Beyond the <span className="text-gradient-red">code</span>
+              Beyond the<span className="text-gradient-red"> code</span>
             </>
           }
-          align="center"
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {softSkills.map((s, i) => {

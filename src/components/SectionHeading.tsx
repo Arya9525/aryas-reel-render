@@ -7,12 +7,16 @@ export function SectionHeading({
   subtitle,
   align = "left",
   tone = "dark",
+  labelClassName,
+  dotClassName,
 }: {
   label: string;
   title: ReactNode;
   subtitle?: string;
   align?: "left" | "center";
   tone?: "dark" | "red";
+  labelClassName?: string;
+  dotClassName?: string;
 }) {
   const centered = align === "center";
   return (
@@ -23,10 +27,10 @@ export function SectionHeading({
             tone === "red"
               ? "border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground"
               : "border-primary/40 bg-primary/10 text-primary-soft"
-          }`}
+          } ${labelClassName ?? ""}`}
         >
           <span
-            className={`h-1.5 w-1.5 rounded-full ${tone === "red" ? "bg-primary-foreground" : "bg-primary"}`}
+            className={`h-1.5 w-1.5 rounded-full ${tone === "red" ? "bg-primary-foreground" : "bg-primary"} ${dotClassName ?? ""}`}
           />
           {label}
         </span>

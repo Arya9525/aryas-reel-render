@@ -4,20 +4,20 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-20 sm:py-28">
+    <section id="skills" className="relative py-20 sm:py-28 -mt-10">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="My Skillset"
           title={
             <>
-              Technologies I <span className="text-gradient-red">build with</span>
+              Technologies <br />
+              <span className="text-gradient-red">I build with</span>
             </>
           }
           subtitle="A technical toolkit spanning programming languages, frontend interfaces, backend services and everyday developer tools."
-          align="center"
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, i) => (
             <Reveal key={group.label} delay={i * 90}>
               <div className="surface-card group h-full p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40">

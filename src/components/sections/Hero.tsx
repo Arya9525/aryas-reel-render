@@ -23,7 +23,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={90}>
             <h1 className="mt-6 text-5xl leading-[0.9] font-extrabold text-primary-foreground sm:text-7xl lg:text-8xl">
-              Arya Kumar
+              Arya <span className="text-ink">Kumar</span>
               <br />
               Mishra
             </h1>
@@ -31,8 +31,6 @@ export function Hero() {
           <Reveal delay={160}>
             <p className="mt-6 font-display text-lg font-bold text-primary-foreground/90 sm:text-2xl">
               {profile.role}
-              <span className="mx-2 opacity-50">/</span>
-              <span className="text-primary-foreground/70">MCA Student</span>
             </p>
           </Reveal>
           <Reveal delay={220}>
@@ -70,7 +68,7 @@ export function Hero() {
 
         <Reveal delay={200} className="relative mx-auto w-full max-w-sm">
           <div className="absolute -inset-4 rounded-[3rem] border border-primary-foreground/20" />
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-primary-foreground/25 bg-ink/30">
+          <div className="relative overflow-hidden rounded-[2.5rem] border-2 border-ink bg-ink/30">
             <img
               src={profile.image}
               alt="Arya Kumar Mishra"
@@ -78,14 +76,6 @@ export function Hero() {
               width={776}
               height={1026}
             />
-          </div>
-          <div className="absolute -bottom-5 -left-4 rounded-2xl border border-border bg-ink/90 px-4 py-3 backdrop-blur-xl sm:-left-8">
-            <p className="font-display text-sm font-extrabold">MERN Stack</p>
-            <p className="text-xs text-muted-foreground">React · Node · MongoDB</p>
-          </div>
-          <div className="absolute -top-4 -right-2 rounded-2xl border border-border bg-ink/90 px-4 py-3 backdrop-blur-xl sm:-right-6">
-            <p className="font-display text-sm font-extrabold">Delhi-NCR</p>
-            <p className="text-xs text-muted-foreground">Open to opportunities</p>
           </div>
         </Reveal>
       </div>

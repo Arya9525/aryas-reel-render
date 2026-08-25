@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function Contact() {
   const details = [
-    { Icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
+    { Icon: Mail, label: "Email", value: profile.email, href: profile.gmailCompose },
     {
       Icon: Phone,
       label: "Phone",
@@ -49,7 +49,12 @@ export function Contact() {
               return (
                 <Reveal key={label} delay={i * 90}>
                   {href ? (
-                    <a href={href} className="block h-full">
+                    <a
+                      href={href}
+                      target={href.startsWith("http") ? "_blank" : undefined}
+                      rel="noreferrer"
+                      className="block h-full"
+                    >
                       {inner}
                     </a>
                   ) : (
@@ -68,7 +73,9 @@ export function Contact() {
               </p>
               <div className="mt-7 flex flex-col gap-3">
                 <a
-                  href={`mailto:${profile.email}`}
+                  href={profile.gmailCompose}
+                  target="_blank"
+                  rel="noreferrer"
                   className="group inline-flex items-center justify-between gap-3 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:glow-red"
                 >
                   <span className="inline-flex items-center gap-2">

@@ -13,12 +13,14 @@ export function Education() {
           <SectionHeading
             label="Education"
             tone="red"
+            labelClassName="!text-[#000000]"
+            dotClassName="!bg-[#000000]"
             title={
-              <span className="text-primary-foreground">
-                Academic
+              <>
+                <span className="!text-[#FFFFFF]">Academic</span>
                 <br />
-                foundation
-              </span>
+                <span className="!text-[#000000]">foundation</span>
+              </>
             }
           />
 
@@ -38,7 +40,7 @@ export function Education() {
                         <p className="text-sm text-primary-foreground/75">{e.place}</p>
                       </div>
                     </div>
-                    <span className="shrink-0 rounded-full border border-primary-foreground/30 px-4 py-1.5 text-xs font-semibold text-primary-foreground">
+                    <span className="shrink-0 rounded-full border border-primary-foreground/30 px-4 py-1.5 text-xs font-semibold !text-[#000000]">
                       {e.meta}
                     </span>
                   </div>
@@ -48,7 +50,7 @@ export function Education() {
                   <ul className="mt-5 flex flex-wrap gap-2">
                     {e.tags.map((t) => (
                       <li key={t}>
-                        <span className="inline-block rounded-full bg-primary-foreground/12 px-3.5 py-1.5 text-xs font-medium text-primary-foreground">
+                        <span className="inline-block rounded-full bg-primary-foreground/12 px-3.5 py-1.5 text-xs font-medium !text-[#000000]">
                           {t}
                         </span>
                       </li>
