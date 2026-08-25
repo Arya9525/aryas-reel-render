@@ -18,7 +18,8 @@ function TechPills({ tech }: { tech: string[] }) {
 }
 
 export function Projects() {
-  const [featured, ...rest] = projects;
+  const featured = projects[0]!;
+  const rest = projects.slice(1);
 
   return (
     <section id="projects" className="relative py-20 sm:py-28">
