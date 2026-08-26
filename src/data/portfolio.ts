@@ -119,6 +119,7 @@ export const projects: Project[] = [
     tech: ["React Native"],
     image: idiary,
     github: "https://github.com/Arya9525/idiary-teacher-app.git",
+    live: "https://play.google.com/store/apps/details?id=com.iDiary.teacherapp",
   },
   {
     name: "St. Francis Secondary School Website",

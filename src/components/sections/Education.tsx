@@ -28,8 +28,8 @@ export function Education() {
             {education.map((e, i) => (
               <Reveal key={e.place} delay={i * 100}>
                 <article className="rounded-[2rem] border border-primary-foreground/20 bg-primary-deep/60 p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-9">
-                  <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 sm:flex sm:items-center sm:justify-between">
-                    <div className="flex min-w-0 items-center gap-4">
+                  <div className="flex flex-wrap items-start gap-4">
+                    <div className="flex min-w-0 flex-1 items-center gap-4">
                       <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary-foreground/15 text-primary-foreground">
                         <GraduationCap className="h-5 w-5" />
                       </span>

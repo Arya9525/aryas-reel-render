@@ -21,8 +21,8 @@ export function Experience() {
           {experience.map((e, i) => (
             <Reveal key={e.company} delay={i * 100}>
               <article className="surface-card p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-9">
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 sm:flex sm:items-center sm:justify-between">
-                  <div className="flex min-w-0 items-center gap-4">
+                <div className="flex flex-wrap items-start gap-4">
+                  <div className="flex min-w-0 flex-1 items-center gap-4">
                     <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/15 text-primary">
                       <Briefcase className="h-5 w-5" />
                     </span>
