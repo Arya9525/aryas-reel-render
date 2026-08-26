@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { Reveal } from "@/components/Reveal";
 import { Wave } from "@/components/Wave";
@@ -17,7 +17,6 @@ export function Hero() {
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] text-primary-foreground uppercase">
-              <Sparkles className="h-3.5 w-3.5" />
               {profile.greeting}
             </span>
           </Reveal>
