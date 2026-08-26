@@ -35,8 +35,7 @@ export const profile = {
   email: "arya500245@gmail.com",
   gmailCompose: "https://mail.google.com/mail/?view=cm&fs=1&to=arya500245@gmail.com",
   phone: "+91 9525949013",
-  resume:
-    "https://drive.google.com/file/d/1jghv-H1vNCYhgZ4w5JqZjQCcOWFOaMKv/view?usp=sharing",
+  resume: "/Arya%20Kumar%20Mishra_CV.pdf",
   github: "https://github.com/Arya9525",
   linkedin: "https://www.linkedin.com/in/arya-kumar-mishra-2a64421a1",
 };
