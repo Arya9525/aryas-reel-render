@@ -21,21 +21,21 @@ export function Experience() {
           {experience.map((e, i) => (
             <Reveal key={e.company} delay={i * 100}>
               <article className="surface-card p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-9">
-                <div className="flex flex-wrap items-start gap-4">
-                  <div className="flex min-w-0 flex-1 items-center gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/15 text-primary">
-                      <Briefcase className="h-5 w-5" />
-                    </span>
+                <div className="card-header sm:flex sm:flex-wrap sm:items-start sm:gap-4">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/15 text-primary">
+                    <Briefcase className="h-5 w-5" />
+                  </span>
+                  <div className="card-header-title sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:gap-4">
                     <div className="min-w-0">
                       <h3 className="font-display text-xl font-extrabold sm:text-2xl">
                         {e.role}
                       </h3>
                       <p className="text-sm text-muted-foreground">{e.company}</p>
                     </div>
+                    <span className="mt-2 sm:mt-0 shrink-0 rounded-full border border-border px-4 py-1.5 text-xs font-semibold text-muted-foreground">
+                      {e.meta}
+                    </span>
                   </div>
-                  <span className="shrink-0 rounded-full border border-border px-4 py-1.5 text-xs font-semibold text-muted-foreground">
-                    {e.meta}
-                  </span>
                 </div>
                 <ul className="mt-6 grid gap-3 pl-1">
                   {e.responsibilities.map((r, j) => (
