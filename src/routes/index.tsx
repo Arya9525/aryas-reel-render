@@ -42,15 +42,15 @@ function Index() {
       <IntroTitleScreen />
       <Hero />
       <About />
-      <Skills />
-      <Process />
+      <Experience />
       <Projects />
+      <Skills />
+      <SoftSkills />
+      <Process />
       <Capabilities />
       <Education />
-      <Experience />
       <Certifications />
       <Activities />
-      <SoftSkills />
       <Contact />
       <Footer />
     </main>

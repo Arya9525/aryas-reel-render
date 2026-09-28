@@ -19,14 +19,18 @@ export function About() {
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch">
-          <Reveal className="relative h-full">
-            <div className="surface-card h-full overflow-hidden border-4 border-primary/60">
-              <img
-                src={profile.image}
-                alt="Arya Kumar Mishra"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
+          <Reveal className="flex items-center justify-center lg:justify-start">
+            <div className="about-hang">
+              <span className="about-hang-ribbon" aria-hidden="true" />
+              <span className="about-hang-clasp" aria-hidden="true" />
+              <div className="about-hang-card">
+                <img
+                  src={profile.image}
+                  alt="Arya Kumar Mishra"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </Reveal>
 

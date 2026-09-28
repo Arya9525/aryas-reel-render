@@ -1,12 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { profile } from "@/data/portfolio";
+
+function scrollToSection(href: string) {
+  const id = href.replace("#", "");
+  const element = document.getElementById(id);
+
+  if (!element) {
+    console.error(`Section not found: ${id}`);
+    return;
+  }
+
+  element.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start",
+  });
+
+  window.history.replaceState(null, "", `#${id}`);
+}
 
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -36,11 +55,14 @@ export function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden justify-center gap-1 lg:flex">
+        <ul className="relative z-10 hidden justify-center gap-1 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
+                onClick={(e: MouseEvent<HTMLAnchorElement>) =>
+                  scrollToSection(e.currentTarget.getAttribute("href") ?? "")
+                }
                 className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
@@ -52,6 +74,7 @@ export function Navbar() {
         <div className="flex items-center justify-end gap-2">
           <a
             href="#contact"
+            onClick={() => scrollToSection("#contact")}
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:glow-red sm:inline-flex"
           >
             Hire Me
@@ -74,7 +97,10 @@ export function Navbar() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e: MouseEvent<HTMLAnchorElement>) => {
+                    scrollToSection(e.currentTarget.getAttribute("href") ?? "");
+                    setOpen(false);
+                  }}
                   className="block rounded-2xl px-4 py-3 text-base font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   {l.label}
@@ -84,7 +110,10 @@ export function Navbar() {
           </ul>
           <a
             href="#contact"
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              scrollToSection("#contact");
+              setOpen(false);
+            }}
             className="mt-2 block rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
           >
             Hire Me

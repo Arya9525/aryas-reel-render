@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function Experience() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section id="experience" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Work Experience"
@@ -21,18 +21,18 @@ export function Experience() {
           {experience.map((e, i) => (
             <Reveal key={e.company} delay={i * 100}>
               <article className="surface-card p-7 transition-transform duration-300 hover:-translate-y-1 sm:p-9">
-                <div className="card-header sm:flex sm:flex-wrap sm:items-start sm:gap-4">
+                <div className="card-header lg:flex lg:flex-wrap lg:items-start lg:gap-4">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/15 text-primary">
                     <Briefcase className="h-5 w-5" />
                   </span>
-                  <div className="card-header-title sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:gap-4">
+                  <div className="card-header-title lg:flex lg:min-w-0 lg:flex-1 lg:items-center lg:gap-4">
                     <div className="min-w-0">
                       <h3 className="font-display text-xl font-extrabold sm:text-2xl">
                         {e.role}
                       </h3>
                       <p className="text-sm text-muted-foreground">{e.company}</p>
                     </div>
-                    <span className="mt-2 sm:mt-0 shrink-0 rounded-full border border-border px-4 py-1.5 text-xs font-semibold text-muted-foreground">
+                    <span className="mt-2 shrink-0 rounded-full border border-border px-4 py-1.5 text-xs font-semibold lg:mt-0 lg:ml-auto text-muted-foreground">
                       {e.meta}
                     </span>
                   </div>

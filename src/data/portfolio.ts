@@ -1,9 +1,9 @@
 import profileImg from "@/assets/image3.jpeg";
 import project1 from "@/assets/project1.png";
-import project2 from "@/assets/project2.png";
 import project3 from "@/assets/project3.png";
 import idiary from "@/assets/idairy.png";
 import stfrancis from "@/assets/stfrancis.png";
+import stanthonys from "@/assets/stanthonys.jpg";
 import upauthority from "@/assets/upauthority.png";
 
 export type Project = {
@@ -147,13 +147,13 @@ export const projects: Project[] = [
     github: "https://github.com/Arya9525/Fitness-Tracker",
   },
   {
-    name: "MANTRA JAP",
+    name: "St. Anthony's Junior College Website",
     description:
-      "Created a mantra-chanting app with a real-time counter, timer, and saved progress.",
-    tech: ["React Native", "JavaScript"],
-    image: project2,
-    github: "https://github.com/Arya9525/MantraJap",
-    live: "https://mantrajap.netlify.app/",
+      "Responsive school/college website built with modern UI, featuring academics, admissions, achievements, events, gallery, notices and contact information.",
+    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    image: stanthonys,
+    github: "https://github.com/Arya9525/template-07-nature-campus",
+    live: "https://template-07-nature-campus.vercel.app/",
   },
   {
     name: "AI IMAGE GENERATOR",
