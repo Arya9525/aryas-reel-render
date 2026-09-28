@@ -150,18 +150,18 @@ export const projects: Project[] = [
     name: "St. Anthony's Junior College Website",
     description:
       "Responsive school/college website built with modern UI, featuring academics, admissions, achievements, events, gallery, notices and contact information.",
-    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    tech: ["HTML", "CSS", "JavaScript"],
     image: stanthonys,
     github: "https://github.com/Arya9525/template-07-nature-campus",
     live: "https://template-07-nature-campus.vercel.app/",
   },
   {
-    name: "AI IMAGE GENERATOR",
+    name: "iDIARY PTM MANAGEMENT SYSTEM",
     description:
-      "Developed an app that creates AI images from text prompts using OpenAI's DALL·E API. Added features like image preview, search, download, and sharing posts publicly.",
-    tech: ["React", "Node.js", "Express.js", "OpenAI API"],
+      "Designed and developed a responsive role-based portal and access for Admin, Principal, Teacher, and Parents. The portal manages Parent-Teacher Meeting workflows, including scheduling, notifications, and feedback.",
+    tech: ["ASP.NET Core MVC", "C#", "JavaScript"],
     image: project3,
-    github: "https://github.com/Arya9525/GemAi",
+    github: "https://github.com/Arya9525",
   },
 ];
 

@@ -22,14 +22,21 @@ export function About() {
           <Reveal className="flex items-center justify-center lg:justify-start">
             <div className="about-hang">
               <span className="about-hang-ribbon" aria-hidden="true" />
-              <span className="about-hang-clasp" aria-hidden="true" />
-              <div className="about-hang-card">
-                <img
-                  src={profile.image}
-                  alt="Arya Kumar Mishra"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+              <span className="about-hang-ring" aria-hidden="true" />
+              <span className="about-hang-clip" aria-hidden="true" />
+              <div className="about-hang-stack">
+                <div className="about-hang-back" aria-hidden="true">
+                  <span className="about-hang-back-detail" />
+                </div>
+                <div className="about-hang-card">
+                  <img
+                    src={profile.image}
+                    alt="Arya Kumar Mishra"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="about-hang-eyelet" aria-hidden="true" />
+                </div>
               </div>
             </div>
           </Reveal>

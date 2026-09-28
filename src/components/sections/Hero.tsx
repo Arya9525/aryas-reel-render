@@ -1,5 +1,4 @@
 // import { ArrowRight } from "lucide-react"; // temporarily hidden with View Projects button
-import { Download } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { Reveal } from "@/components/Reveal";
 import { Wave } from "@/components/Wave";
@@ -38,9 +37,9 @@ export function Hero() {
               {profile.intro}
             </p>
           </Reveal>
+          {/* Buttons removed - "View Projects" / "Contact Me" / "Resume" now live in the Navbar.
           <Reveal delay={300}>
             <div className="mt-9 flex flex-wrap gap-3">
-              {/* View Projects button - hidden temporarily, restore later
               <a
                 href="#projects"
                 className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-foreground transition-transform duration-200 hover:-translate-y-0.5"
@@ -48,37 +47,15 @@ export function Hero() {
                 View Projects
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-              */}
-              {/* Contact Me button - hidden temporarily, restore later
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 Contact Me
               </a>
-              */}
-              {/* Old Resume button location (replaced by primary-styled Resume above)
-              <a
-                href={profile.resume}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-              >
-                <Download className="h-4 w-4" />
-                Resume
-              </a>
-              */}
-              <a
-                href={profile.resume}
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-foreground transition-transform duration-200 hover:-translate-y-0.5"
-              >
-                Resume
-                <Download className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
             </div>
           </Reveal>
+          */}
         </div>
 
         <Reveal delay={200} className="relative mx-auto w-full max-w-sm">

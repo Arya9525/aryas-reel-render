@@ -196,6 +196,18 @@
 
 .about-hang {
   --about-card-w: min(100%, 300px);
+  --about-ribbon-w: 50px;
+  --about-back-x: 26px;
+  --about-back-y: 32px;
+  --about-back-rot: 6deg;
+  --about-metal: linear-gradient(
+    140deg,
+    #d7dbe0 0%,
+    #8f959c 22%,
+    #383c41 50%,
+    #7c838a 68%,
+    #212428 100%
+  );
   container-type: inline-size;
   display: flex;
   flex-direction: column;
@@ -207,41 +219,200 @@
 
 .about-hang-ribbon {
   flex: none;
-  width: 12px;
-  height: 239px;
-  border-radius: 3px 3px 0 0;
-  background: linear-gradient(
-    to right,
-    #050505 0%,
-    #2a2726 45%,
-    #050505 100%
-  );
-  box-shadow:
-    inset 1px 0 0 rgb(255 255 255 / 10%),
-    inset -1px 0 0 rgb(0 0 0 / 60%),
-    0 3px 10px rgb(0 0 0 / 60%);
+  width: var(--about-ribbon-w);
+  height: 155px;
+  border-radius: 0;
+  background:
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 9%) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(180deg, rgb(255 255 255 / 6%) 0 1px, transparent 1px 3px),
+    linear-gradient(
+      90deg,
+      var(--primary-deep) 0%,
+      var(--primary) 16%,
+      var(--primary) 84%,
+      var(--primary-deep) 100%
+    );
+  box-shadow: 0 8px 16px -14px rgb(0 0 0 / 60%);
 }
 
 @supports (height: 1cqi) {
   .about-hang-ribbon {
-    height: 79.67cqi;
+    height: 51.67cqi;
   }
 }
 
-.about-hang-clasp {
-  position: relative;
+@supports (width: 1cqi) {
+  .about-hang {
+    --about-ribbon-w: 16.67cqi;
+  }
+}
+
+.about-hang-ring {
   flex: none;
-  width: 34px;
-  height: 12px;
-  margin-top: -4px;
-  border-radius: 3px;
-  background: linear-gradient(to bottom, #2a2726 0%, #0a0a0a 100%);
+  width: 26px;
+  height: 34px;
+  margin-top: -8px;
+  border-radius: 999px;
+  background: var(--about-metal);
+  box-shadow: inset 0 1px 1px rgb(255 255 255 / 45%);
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 60%));
+  -webkit-mask: radial-gradient(
+    ellipse 8.5px 12.5px at 50% 50%,
+    transparent 0 100%,
+    #000 100%
+  );
+  mask: radial-gradient(
+    ellipse 8.5px 12.5px at 50% 50%,
+    transparent 0 100%,
+    #000 100%
+  );
+}
+
+.about-hang-clip {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  width: 16px;
+  height: 54px;
+  margin-top: -8px;
+  margin-bottom: -12px;
+  border-radius: 4px;
+  background:
+    radial-gradient(
+      circle at 50% 64%,
+      rgb(206 211 218 / 55%) 0 1.2px,
+      rgb(0 0 0 / 75%) 1.2px 3.2px,
+      transparent 3.6px
+    ),
+    linear-gradient(
+      90deg,
+      #0f1114 0%,
+      #43484f 36%,
+      #5d636a 50%,
+      #212429 76%,
+      #0a0c0e 100%
+    );
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 12%),
-    0 3px 8px rgb(0 0 0 / 65%);
+    inset 0 1px 0 rgb(255 255 255 / 24%),
+    inset 0 -1px 0 rgb(0 0 0 / 70%),
+    0 4px 10px rgb(0 0 0 / 65%);
+}
+
+.about-hang-clip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 17px;
+  height: 15px;
+  border-radius: 999px;
+  background: var(--about-metal);
+  box-shadow: inset 0 1px 1px rgb(255 255 255 / 45%);
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 60%));
+  -webkit-mask: radial-gradient(
+    ellipse 4.5px 4px at 50% 50%,
+    transparent 0 100%,
+    #000 100%
+  );
+  mask: radial-gradient(
+    ellipse 4.5px 4px at 50% 50%,
+    transparent 0 100%,
+    #000 100%
+  );
+  transform: translateX(-50%);
+}
+
+.about-hang-clip::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  width: 16px;
+  height: 24px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #0c0e11 0%,
+    #3b4047 38%,
+    #4d535a 52%,
+    #191c20 78%,
+    #07080a 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 25%),
+    0 5px 12px rgb(0 0 0 / 70%);
+  transform: translateX(-50%);
+}
+
+.about-hang-stack {
+  position: relative;
+  width: 100%;
+}
+
+.about-hang-back {
+  position: absolute;
+  z-index: 0;
+  top: var(--about-back-y);
+  left: var(--about-back-x);
+  width: 100%;
+  aspect-ratio: 388 / 513;
+  overflow: hidden;
+  border: 5px solid #000;
+  border-radius: var(--radius-3xl);
+  background:
+    linear-gradient(205deg, rgb(255 255 255 / 16%) 0%, rgb(255 255 255 / 0%) 38%),
+    linear-gradient(180deg, rgb(0 0 0 / 30%) 0 13%, transparent 13%),
+    linear-gradient(180deg, transparent 74%, rgb(0 0 0 / 22%) 74%),
+    linear-gradient(
+      160deg,
+      var(--primary-soft) 0%,
+      var(--primary) 42%,
+      var(--primary-deep) 100%
+    );
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 8%),
+    0 14px 34px -14px rgb(0 0 0 / 75%);
+  transform: rotate(var(--about-back-rot));
+}
+
+.about-hang-back-detail {
+  position: absolute;
+  top: 34%;
+  left: 12%;
+  width: 58%;
+  height: 20%;
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgb(0 0 0 / 28%) 0 3px,
+    transparent 3px 11px
+  );
+}
+
+.about-hang-eyelet {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle closest-side,
+    #04050a 0 40%,
+    #1b1e22 41%,
+    #767c83 52%,
+    #2a2e33 80%,
+    #0c0e10 100%
+  );
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 65%),
+    inset 0 1px 1px rgb(255 255 255 / 30%);
+  transform: translateX(-50%);
 }
 
 .about-hang-card {
+  position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 388 / 513;
   overflow: hidden;
@@ -270,6 +441,16 @@
 @media (min-width: 1024px) {
   .about-hang {
     margin-inline: 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .about-hang {
+    --about-card-w: min(100%, 264px);
+    --about-back-x: 10px;
+    --about-back-y: 24px;
+    --about-back-rot: 4deg;
+    transform: translateX(-6px);
   }
 }
 

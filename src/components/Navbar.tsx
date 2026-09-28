@@ -73,11 +73,12 @@ export function Navbar() {
 
         <div className="flex items-center justify-end gap-2">
           <a
-            href="#contact"
-            onClick={() => scrollToSection("#contact")}
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer"
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:glow-red sm:inline-flex"
           >
-            Hire Me
+            Resume
           </a>
           <button
             type="button"
